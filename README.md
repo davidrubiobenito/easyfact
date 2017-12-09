@@ -1,2 +1,1 @@
-# easyfact
-Clase de ejemplo Spring Boot y Angular 4
+# My project's README
