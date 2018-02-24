@@ -41,7 +41,8 @@ public class ComprobanteElectronicoController {
 	@Autowired
 	private ConsultaComprobanteElectronicoService service;
 
-	@CrossOrigin(origins="http://localhost:4200")
+	//@CrossOrigin(origins="http://localhost:4200")
+	@CrossOrigin
 	@PostMapping(value="/ConsultaComprobanteElectronico")
 	public @ResponseBody ComprobanteElectronico consultar(@RequestBody ConsultaComprobanteElectronico consultaComprobanteElectronico) {
 		ComprobanteElectronico result = new ComprobanteElectronico();

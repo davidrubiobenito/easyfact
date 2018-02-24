@@ -23,7 +23,8 @@ public class DownloadController {
 
     private static final String APPLICATION_PDF = "application/pdf";
 
-    @CrossOrigin(origins="http://localhost:4200")
+    //@CrossOrigin(origins="http://localhost:4200")
+    @CrossOrigin
     @RequestMapping(value = "/pdf/{fileName:.+}", method = RequestMethod.GET, produces = "application/pdf")
     public @ResponseBody
     HttpEntity<byte[]> download(@PathVariable("fileName") String fileName, HttpServletResponse response) throws IOException {

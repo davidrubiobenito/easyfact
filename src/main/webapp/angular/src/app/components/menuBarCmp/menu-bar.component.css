@@ -1,0 +1,44 @@
+/* file --> menu-bar.component.css */
+
+#navbarSupportedContent .navbar-nav {
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+#navbarSupportedContent .navbar-nav li + li {
+  border-top: 0.1px solid #9a9da0;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  nav.navbar{
+    flex-direction: column;
+  }
+
+  .navbar-brand{
+    margin: 0 auto;
+  }
+
+  #navbarSupportedContent{
+    width: 100%;
+  }
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
