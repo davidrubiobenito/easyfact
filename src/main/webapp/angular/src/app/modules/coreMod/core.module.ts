@@ -3,27 +3,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+// Importamos el modulo de las Rutas
+import { AppRoutingModule } from './../app.routing';
+/* Importamos Modulos gestionados por el módulo */
+import { MenuBarModule } from './../../modules/menuBarMod/menu-bar.module';
+
 /* Impotamos componentes que maneja este modulo */
 import { ShellComponent } from '../../components/shellCmp/shell.component';
-import { MenuBarComponent } from '../../components/menuBarCmp/menu-bar.component';
-
-
-import {RouterModule , Routes} from "@angular/router";
-const routes: Routes = [
-  {
-    path: '',
-    loadChildren: './../homeMod/home.module#HomeModule'
-  },
-  {
-    path: 'blog',
-    loadChildren: './../blogMod/blog.module#BlogModule'
-  }
-];
 
 
 @NgModule({
-  imports:      [ CommonModule, FormsModule, RouterModule.forRoot(routes), ],
-  declarations: [ ShellComponent, MenuBarComponent],
-  exports:      [ ShellComponent,  ]
+  imports:      [ AppRoutingModule, CommonModule, FormsModule , MenuBarModule],
+  declarations: [ ShellComponent, ],
+  exports:      [ ShellComponent, ]
 })
 export class CoreModule { }

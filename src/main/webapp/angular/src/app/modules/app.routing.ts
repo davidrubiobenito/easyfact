@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from "@angular/router";
 
 /*Importamos Componentes gestionados por el modulo*/
-import { ShellComponent } from '../../components/shellCmp/shell.component';
+import { ShellComponent } from '../components/shellCmp/shell.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: './../home/home.module#HomeModule', pathMatch: 'full'},
-  { path: 'blog', loadChildren: './../blog/blog.module#BlogModule' }
+  { path: '', loadChildren: './homeMod/home.module#HomeModule', pathMatch: 'full'},
+  { path: 'blog', loadChildren: './blogMod/blog.module#BlogModule' }
 ];
 
 @NgModule({
